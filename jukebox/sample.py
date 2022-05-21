@@ -39,7 +39,7 @@ def sample_partial_window(zs, labels, sampling_kwargs, level, prior, tokens_to_s
     return sample_single_window(zs, labels, sampling_kwargs, level, prior, start, hps, combined_progress=combined_progress, autosave=autosave)
 
 # Sample a single window of length=n_ctx at position=start on level=level
-def sample_single_window(zs, labels, sampling_kwargs, level, prior, start, hps, combined_progress=False, autosave=True):
+def sample_single_window(zs, labels, sampling_kwargs, level, prior, start, hps, combined_progress=False, autosave=False):
     logdir = get_logdir(hps, level)
     if autosave:
         try:
